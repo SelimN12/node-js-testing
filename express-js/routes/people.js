@@ -3,12 +3,12 @@ const router = express.Router();
 
 let { people } = require('../data');
 
-// GET all people
+
 router.get('/', (req, res) => {
   res.status(200).json({ success: true, data: people });
 });
 
-// CREATE person
+
 router.post('/', (req, res) => {
   const { name } = req.body;
 
@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
   res.status(201).json({ success: true, person: name });
 });
 
-// UPDATE person
+
 router.put('/:id', (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
@@ -45,7 +45,7 @@ router.put('/:id', (req, res) => {
   res.status(200).json({ success: true, data: newPeople });
 });
 
-// DELETE person
+
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
 

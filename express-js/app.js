@@ -7,7 +7,7 @@ app.use(express.static('./methods-public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// routes
+
 app.use('/api/people', peopleRouter);
 
 app.post('/login', (req, res) => {
